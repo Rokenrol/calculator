@@ -111,3 +111,34 @@ minusButton.addEventListener("click", () => {
   result = "";
   secondNumber = "";
 });
+
+// Multiply button
+
+multiplyButton.addEventListener("click", () => {
+  if (firstNumber === "") {
+    theOperator = multiply;
+    firstNumber = displayValue;
+  } else {
+    secondNumber = displayValue;
+  }
+
+  if (firstNumber !== "" && secondNumber !== "") {
+    if (secondNumber === 0 && theOperator === divide) {
+      display.textContent = "NOPE";
+      secondNumber = "";
+    } else {
+      result = operate(theOperator, firstNumber, secondNumber);
+      if (!Number.isInteger(result)) {
+        result = +result.toFixed(2);
+      }
+      displayValue = result;
+      display.textContent = result;
+      firstNumber = result;
+      theOperator = multiply;
+      secondNumber = "";
+    }
+  }
+  displayValue = "";
+  result = "";
+  secondNumber = "";
+});
