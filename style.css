@@ -14,7 +14,7 @@
     padding: 0;
   }
 
-  /* Center the calculator on the screen */
+  /* Center calculator on the screen */
 
 body {
     min-height: 100vh;
@@ -27,9 +27,9 @@ body {
   /* Calculator body */
 
 .container {
-    width: 480px;
-    min-width: 480px;
-    height: 750px;
+    width: 400px;
+    min-width: 400px;
+    height: 600px;
     background-color: rgb(209, 209, 209);
     border: 6px solid rgb(27, 27, 27);
     border-radius: 1rem;
@@ -41,12 +41,12 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 100px;
+    height: 80px;
     padding: 5px;
     margin: 5px;
     font-family: 'e1234', 'Courier New', Courier, monospace;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3.2rem;
     border: 5px solid rgb(245, 245, 245);
     border-radius: 10px;
     color: rgb(45, 201, 193);
@@ -60,7 +60,7 @@ body {
     margin: 0 5px;
     padding: 5px;
     font-family: Kanit, sans-serif;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: rgb(233, 15, 0);
     background-color: rgb(245, 245, 245);
     border-radius: 5px;
@@ -82,18 +82,21 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 64px;
   }
 
   /* Button general styles */
 
 button {
-    height: 80px;
-    width: 95px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 60px;
+    width: 75px;
     margin: 10px;
     border: 3px solid black;
     border-radius: 20%;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     color: white;
     background-color: rgb(10, 61, 90);
   }
@@ -128,7 +131,7 @@ button:hover {
   /* Add button font size enhanced to match other buttons */
 
 .add {
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
 
   /*Clear button color */
