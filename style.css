@@ -1,0 +1,15 @@
+/*Custom font for numbers on calculator display */
+
+@font-face {
+    font-family: 'e1234';
+    src: url(./fonts/e1234-font/E1234-p7pER.ttf);
+  }
+  
+  /* Basic CSS reset */
+  
+  html,
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
