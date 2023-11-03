@@ -130,3 +130,9 @@ button:hover {
 .add {
     font-size: 3rem;
   }
+
+  /*Clear button color */
+
+.clear {
+    background-color: rgb(190, 26, 26);
+  }
