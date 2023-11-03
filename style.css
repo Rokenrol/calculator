@@ -124,3 +124,9 @@ button:hover {
     background-color: whitesmoke;
     color: black;
   }
+
+  /* Add button font size enhanced to match other buttons */
+
+.add {
+    font-size: 3rem;
+  }
