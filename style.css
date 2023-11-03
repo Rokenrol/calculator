@@ -117,3 +117,10 @@ button:hover {
   font-weight: 500;
   background-color: rgb(3, 126, 155);
 }
+
+/* Number buttons colors */
+
+.btn {
+    background-color: whitesmoke;
+    color: black;
+  }
