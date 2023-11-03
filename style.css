@@ -103,3 +103,17 @@ button {
 button:hover {
     box-shadow: 0px 0px 30px lightgoldenrodyellow;
   }
+
+  /* Number and operator buttons general styles */
+
+.btn,
+.add,
+.subtract,
+.multiply,
+.divide,
+.equals,
+.clear {
+  font-family: Kanit, sans-serif;
+  font-weight: 500;
+  background-color: rgb(3, 126, 155);
+}
