@@ -142,3 +142,36 @@ multiplyButton.addEventListener("click", () => {
   result = "";
   secondNumber = "";
 });
+
+// Divide button
+
+divideButton.addEventListener("click", () => {
+  if (firstNumber === "") {
+    theOperator = divide;
+    firstNumber = displayValue;
+  } else {
+    secondNumber = displayValue;
+  }
+
+  if (firstNumber !== "" && secondNumber !== "") {
+    if (secondNumber === 0 && theOperator === divide) {
+      display.textContent = "NOPE";
+      firstNumber = "";
+      secondNumber = "";
+    } else {
+      result = operate(theOperator, firstNumber, secondNumber);
+      if (!Number.isInteger(result)) {
+        result = +result.toFixed(2);
+      }
+      displayValue = result;
+      display.textContent = result;
+      firstNumber = result;
+      theOperator = divide;
+      secondNumber = "";
+    }
+  }
+
+  displayValue = "";
+  result = "";
+  secondNumber = "";
+});
