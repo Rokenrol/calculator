@@ -175,3 +175,14 @@ divideButton.addEventListener("click", () => {
   result = "";
   secondNumber = "";
 });
+
+// Clear button (empties all variables)
+
+clearButton.addEventListener("click", () => {
+  firstNumber = "";
+  secondNumber = "";
+  displayValue = "";
+  theOperator = "";
+  result = "";
+  display.textContent = 0;
+});
