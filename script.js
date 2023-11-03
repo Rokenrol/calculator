@@ -80,3 +80,34 @@ plusButton.addEventListener("click", () => {
   result = "";
   secondNumber = "";
 });
+
+// Minus button
+
+minusButton.addEventListener("click", () => {
+  if (firstNumber === "") {
+    theOperator = subtract;
+    firstNumber = displayValue;
+  } else {
+    secondNumber = displayValue;
+  }
+
+  if (firstNumber !== "" && secondNumber !== "") {
+    if (secondNumber === 0 && theOperator === divide) {
+      display.textContent = "NOPE";
+      secondNumber = "";
+    } else {
+      result = operate(theOperator, firstNumber, secondNumber);
+      if (!Number.isInteger(result)) {
+        result = +result.toFixed(2);
+      }
+      displayValue = result;
+      display.textContent = result;
+      firstNumber = result;
+      theOperator = subtract;
+      secondNumber = "";
+    }
+  }
+  displayValue = "";
+  result = "";
+  secondNumber = "";
+});
