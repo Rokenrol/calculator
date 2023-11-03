@@ -53,3 +53,25 @@ body {
     text-shadow: 0 0 12px rgb(45, 201, 193);
     background-color: rgb(27, 27, 27);
   }
+
+  /* Decorative text under the display */
+
+.container > p {
+    margin: 0 5px;
+    padding: 5px;
+    font-family: Kanit, sans-serif;
+    font-size: 1.7rem;
+    color: rgb(233, 15, 0);
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+  }
+  
+  span {
+    display: inline-block;
+    margin-left: 2px;
+    padding: 0 15px;
+    border: 1px solid white;
+    border-radius: 7px;
+    color: white;
+    background-color: rgb(45, 201, 193);
+  }
