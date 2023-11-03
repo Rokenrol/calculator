@@ -75,3 +75,12 @@ body {
     color: white;
     background-color: rgb(45, 201, 193);
   }
+
+  /* Calculator buttons container */
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+  }
