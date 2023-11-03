@@ -186,3 +186,33 @@ clearButton.addEventListener("click", () => {
   result = "";
   display.textContent = 0;
 });
+
+// Equals button
+
+let result = 0;
+
+equalsButton.addEventListener('click', () => {
+  secondNumber = displayValue;
+
+  if (secondNumber === 0 && theOperator === divide) {
+    display.textContent = "NOPE";
+    secondNumber = "";
+  } else if (firstNumber === "" && secondNumber === "" || firstNumber === "" && secondNumber !== "") {
+    theOperator = "";
+    result = "";
+    secondNumber = "";
+  } else if (firstNumber !== "" && secondNumber === "" && theOperator !== "") {
+    result = "";
+  } else {
+    result = operate(theOperator, firstNumber, secondNumber);
+
+    if (!Number.isInteger(result)) {
+      result = +result.toFixed(2);
+    }
+
+    display.textContent = result;
+    displayValue = result;
+    firstNumber = "";
+    secondNumber = "";
+  }
+});
