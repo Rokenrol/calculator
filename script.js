@@ -20,3 +20,30 @@ let displayValue = "";
 const operate = function(operator, num1, num2) {
   return operator(num1, num2);
 };
+
+// Variables for selecting DOM elements (number buttons and the "screen")
+
+const buttons = document.getElementsByClassName("btn");
+const display = document.body.children[0].firstElementChild;
+
+// Add event listeners to the number buttons
+
+for (let button of buttons) {
+  button.addEventListener("click", (e) => {
+    displayValue += e.target.textContent;
+    if (displayValue.length > 9) {
+      displayValue = displayValue.slice(0, 9);
+    }
+    display.textContent = displayValue;
+    displayValue = parseInt(displayValue);
+  });
+};
+
+// Variables for selecting DOM elements (operator buttons)
+
+const plusButton = document.getElementsByClassName("add")[0];
+const minusButton = document.getElementsByClassName("subtract")[0];
+const multiplyButton = document.getElementsByClassName("multiply")[0];
+const divideButton = document.getElementsByClassName("divide")[0];
+const clearButton = document.getElementsByClassName("clear")[0];
+const equalsButton = document.getElementsByClassName("equals")[0];
