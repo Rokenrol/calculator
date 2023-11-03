@@ -193,7 +193,7 @@ let result = 0;
 
 equalsButton.addEventListener('click', () => {
   secondNumber = displayValue;
-
+  
   if (secondNumber === 0 && theOperator === divide) {
     display.textContent = "NOPE";
     secondNumber = "";
@@ -205,13 +205,20 @@ equalsButton.addEventListener('click', () => {
     result = "";
   } else {
     result = operate(theOperator, firstNumber, secondNumber);
+    
+    result = result.toString();
+    if (result.length > 9) {
+      result = result.slice(0, 9);
+    }
+
+    result = +result;
 
     if (!Number.isInteger(result)) {
       result = +result.toFixed(2);
     }
 
-    display.textContent = result;
     displayValue = result;
+    display.textContent = result;
     firstNumber = "";
     secondNumber = "";
   }
